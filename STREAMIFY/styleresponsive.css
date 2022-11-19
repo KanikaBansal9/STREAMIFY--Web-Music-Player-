@@ -1,0 +1,144 @@
+@media screen and (max-width: 1200px) {
+	/* animated favourites text will be hidden for this viewport width*/
+	.fav {
+		display: none !important;
+	}
+	/* reduced size of search bar */
+	.searchbar {
+		width: 25%;
+		margin-left: 20%;
+		
+	}
+	input {
+		font-size: 11px !important;
+	}
+
+	.profilepicture img{
+		width:30px !important;
+		height: 30px !important;
+		
+	}
+
+	.stations{
+		visibility: hidden;
+	}
+
+}
+ 
+
+@media screen and (max-width:900px) {
+	/* more button vil ve visible and section 2 will be hidden by default for this viewport */
+	.searchbar {
+		width: 20%;
+		margin-left: 21% !important; 
+		
+	}
+	label[for="more"]{
+		display: block;
+	}
+
+	.section2 {
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		width: 300px;
+		height: 66vh;
+		background-color: #050043;
+		box-shadow: 0px 0px 2px 1px white;
+		right: 0px;
+		top: 23.5%;
+		z-index: 5;
+		overflow: scroll;
+		padding-left:10px;
+		transition: visibility ease-in-out 0.2s;
+		transition: opacity ease-in-out 0.2s;
+
+	}
+
+	.playlistcontent {
+		overflow: visible;
+	}
+	/* re-adjusted the queue options box */
+	.queueoptions {
+		position: absolute;
+		height: auto;
+		width: auto;
+		top: 7%;
+		right: 0%;
+	}
+	input[id="more"]:checked ~ .section2 {
+		visibility: visible;
+		opacity: 1;
+	}
+	/* hide section 2 scrollbar */
+	.section2::-webkit-scrollbar {
+		display: none;
+	}
+	.section1 {
+		width: 100%;
+	}
+	.card {
+		min-width: 250px; /* to apply the flex effect */
+	}
+
+	/* .popularartist{
+		min-width:250px;
+	} */
+	
+	/* .musicthemes{
+		height: 26% !important;
+	} */
+
+}
+
+@media screen and (max-width:600px){
+	.navigationbar{
+		height: 50px !important;
+
+	}
+	.profilepicture{
+		visibility: hidden;
+		
+	}
+}
+
+@media screen and (max-width: 700px) {
+	/* in the screens of this width, generally volume buttons are provided at the side. */
+	/* so there is no need for the volume slider at this width. so i have removed them from the display */
+	/* footer section */
+	.extras > div:nth-child(3) {
+		display: none;
+	}
+	.extras > div:nth-child(4) {
+		display: none;
+	}
+	.outer-div {
+		width: 36vw;
+		height: 24vw;
+		min-width: 123px;
+		min-height: 82px;
+	}
+	.outer-div .inner-div span {
+		font-size: 4vw;
+	}
+
+	.controls{
+		font-size: 12px !important;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	/* this is the most important media query */
+	/* navigation bar section */
+	/* website image */
+	.logo img {
+		width: 100px !important;
+        height: 27px !important;
+	}
+	
+	/* notification bell */
+	.notificationbell i {
+		width: 20px;
+		height: 20px;
+	}
+}
